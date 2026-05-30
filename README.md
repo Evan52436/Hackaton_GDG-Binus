@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RuangLokal AI - Hackathon GDG Binus 🚀
 
-## Getting Started
+RuangLokal AI adalah platform generator modul (RPP) dan kuis interaktif yang mengadaptasi kearifan lokal dan wilayah asal siswa. Dibangun dengan **Next.js**, **Prisma**, dan kekuatan **Google Gemini 2.5 Flash API**.
 
-First, run the development server:
+## 🌐 Cara Menguji (Tanpa Install)
+Cara terbaik untuk penguji (juri) adalah dengan mengakses versi yang sudah di-deploy. 
+(Masukkan URL deployment Anda di sini, contoh: `https://ruanglokal-ai.vercel.app`)
 
+Dengan mengakses versi yang sudah di-deploy, penguji **TIDAK PERLU** memiliki API Key, karena aplikasi menggunakan API Key yang sudah disetel aman di server.
+
+---
+
+## 💻 Cara Menguji Secara Lokal (Bagi Juri/Penguji)
+
+Jika Anda harus menjalankan *source code* ini secara lokal di mesin Anda, Anda **harus** memiliki API Key Gemini karena aplikasi ini membutuhkannya untuk fitur *Generative AI*.
+
+### Langkah 1: Persiapan API Key
+1. Dapatkan API Key secara gratis melalui [Google AI Studio](https://aistudio.google.com/app/apikey).
+2. Di *root directory* proyek, gandakan (copy) file `.env.example` dan ubah namanya menjadi `.env`.
+3. Masukkan API Key Anda ke dalam file `.env` tersebut:
+   ```env
+   GEMINI_API_KEY=AIzaSy_masukkan_api_key_anda_disini
+   ```
+
+### Langkah 2: Persiapan Database (Prisma)
+Proyek ini menggunakan SQLite (via Prisma) agar mudah dijalankan lokal.
+Jalankan perintah ini di terminal untuk sinkronisasi database:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx prisma db push
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Langkah 3: Menjalankan Aplikasi
+Install dependensi dan jalankan *development server*:
+```bash
+npm install
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Buka [http://localhost:3000](http://localhost:3000) di browser Anda.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Kredensial Login Lokal:**
+* Masuk ke Panel Guru membutuhkan PIN: **0000**
