@@ -1,3 +1,7 @@
+# MOHON DIBACA
+
+Password untuk login panel guru adalah 0000
+
 # RuangLokal AI - Hackathon GDG Binus 🚀
 
 RuangLokal AI adalah platform generator modul (RPP) dan kuis interaktif yang mengadaptasi kearifan lokal dan wilayah asal siswa. Dibangun dengan **Next.js**, **Prisma**, dan kekuatan **Google Gemini 2.5 Flash API**.
